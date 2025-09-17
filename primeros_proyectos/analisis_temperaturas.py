@@ -16,6 +16,7 @@ temperaturas = pd.DataFrame ({
 print ("Temperaturas por día")
 print (temperaturas)
 
+
 print ("\n--- ANÁLISIS ESTADÍSTICO ---")
 
 #Temperatura promedio por paciente
@@ -105,7 +106,9 @@ plt.ylabel('Temperatura (°C)', fontsize=12)
 plt.legend(fontsize=10)
 plt.grid(True, alpha=1)
 plt.xticks(rotation=45)
+plt.tight_layout()
 plt.show()
+
 
 
 #GRÁFICO 2: Gráfico de barras - Promedios
@@ -129,6 +132,7 @@ plt.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.show()
 
+
 #GRÁFICO 3: Histograma - Distribución de temperaturas
 plt.figure(figsize=(10,6))
 plt.hist(temperaturas['paciente_1'], bins=15, alpha=0.7, label='Paciente 1', color='lightblue')
@@ -146,4 +150,3 @@ plt.show()
 
 print("¡Gráficos generados exitosamente")
 print("Revisa las ventanas que se abrieron para ver las visualizaciones.")
-
