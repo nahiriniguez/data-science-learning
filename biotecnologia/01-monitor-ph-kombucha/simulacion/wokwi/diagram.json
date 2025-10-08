@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "author": "Nahir Iñiguez",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 93, "left": 98.8, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 327, "left": 47.4, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -63.77, "left": 121.6, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 147.95,
+      "left": 288,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 67,
+      "left": 443.7,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": 249.4,
+      "left": 443.7,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot3",
+      "top": 77.8,
+      "left": -1.3,
+      "rotate": 270,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "bb1:tn.1", "bb1:bn.1", "green", [ "v0" ] ],
+    [ "bb1:tp.2", "bb1:bp.2", "green", [ "v0" ] ],
+    [ "lcd1:VSS", "bb1:tn.3", "green", [ "v0" ] ],
+    [ "lcd1:VDD", "bb1:tp.4", "green", [ "v0" ] ],
+    [ "lcd1:RS", "bb1:7b.f", "green", [ "v0" ] ],
+    [ "bb1:7b.j", "uno:12", "green", [ "v67.2", "h48" ] ],
+    [ "lcd1:RW", "bb1:tn.6", "green", [ "v0" ] ],
+    [ "lcd1:E", "bb1:9b.f", "green", [ "v0" ] ],
+    [ "bb1:9b.j", "uno:11", "green", [ "v57.6", "h-9.6" ] ],
+    [ "lcd1:D4", "bb1:14b.f", "green", [ "v0" ] ],
+    [ "bb1:14b.j", "uno:5", "green", [ "v0" ] ],
+    [ "lcd1:D5", "bb1:15b.f", "green", [ "v0" ] ],
+    [ "bb1:15b.j", "uno:4", "green", [ "v0" ] ],
+    [ "lcd1:D6", "bb1:16b.f", "green", [ "v0" ] ],
+    [ "bb1:16b.j", "uno:3", "green", [ "v0" ] ],
+    [ "lcd1:D7", "bb1:17b.f", "green", [ "v0" ] ],
+    [ "bb1:17b.j", "uno:2", "green", [ "v0" ] ],
+    [ "r1:1", "bb1:18t.b", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:24t.b", "", [ "$bb" ] ],
+    [ "lcd1:A", "bb1:18t.a", "green", [ "v0" ] ],
+    [ "bb1:24t.a", "bb1:tp.20", "green", [ "v0" ] ],
+    [ "lcd1:K", "bb1:tn.16", "green", [ "v0" ] ],
+    [ "pot1:VCC", "bb1:tp.25", "red", [ "h0" ] ],
+    [ "pot1:GND", "bb1:tn.24", "black", [ "h0" ] ],
+    [ "pot2:GND", "bb1:bn.25", "black", [ "h0" ] ],
+    [ "pot2:VCC", "bb1:bp.24", "red", [ "h0" ] ],
+    [ "pot1:SIG", "bb1:30b.f", "green", [ "h0" ] ],
+    [ "uno:A0", "bb1:30b.j", "green", [ "v38.3", "h147.8" ] ],
+    [ "uno:A1", "bb1:29b.j", "green", [ "v28.7", "h119.1" ] ],
+    [ "pot2:SIG", "bb1:29b.i", "green", [ "h-19.2", "v-58" ] ],
+    [ "pot3:GND", "bb1:tn.4", "black", [ "h0" ] ],
+    [ "pot3:VCC", "bb1:tp.1", "red", [ "h0" ] ],
+    [ "pot3:SIG", "lcd1:V0", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
